@@ -1,8 +1,7 @@
 import 'dotenv/config';
-import app from './src/app';
+import app from './src/app.js';
 import cors from 'cors';
-// const app = require('./src/app');
-// const cors = require('cors');
+
 
 // Middleware
 app.use(cors());
