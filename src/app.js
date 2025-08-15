@@ -12,6 +12,7 @@ app.use(bodyParser.json());
  * ------------------------------------- ROUTES SECTION -------------------------------------
  */
 app.use('/api/auth', authRoutes);
+app.use('/api/db', dbTestRoutes);
 
 
 /**

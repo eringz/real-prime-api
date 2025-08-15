@@ -3,6 +3,6 @@ import { DbTestController } from '../controllers/dbTestController.js';
 
 const router = Router();
 
-router.get('/db-test', DbTestController.testConnection);
+router.get('/test', DbTestController.testConnection);
 
 export default router;
