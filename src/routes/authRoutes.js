@@ -1,6 +1,6 @@
-const express = require('express');
+import express from 'express'
 const router = express.Router();
-const authController = require('../controllers/authController.js');
+import authController from '../controllers/authController.js';
 
 /**
  * ------------------------------------- AUTHENTICATION SECTION -------------------------------------

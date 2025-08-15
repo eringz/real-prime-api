@@ -1,8 +1,8 @@
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
+import authRoutes from './routes/authRoutes.js';
 
-const authRoutes = require('./routes/authRoutes.js');
 const app = express();
 
 app.use(cors());
