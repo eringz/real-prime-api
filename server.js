@@ -1,4 +1,4 @@
-require('dotenv').config();
+import 'dotenv/config';
 const app = require('./src/app');
 const cors = require('cors');
 
