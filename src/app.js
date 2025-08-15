@@ -21,4 +21,4 @@ app.get('/', (req, res) => {
     res.send('Real Prime is running!');
 });
 
-module.exports = app;
+export default app;
