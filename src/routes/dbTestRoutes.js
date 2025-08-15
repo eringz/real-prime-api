@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { DbTestController } from '../controllers/dbTestController.js';
+import DbTestController from '../controllers/dbTestController.js';
 
 const router = Router();
 
