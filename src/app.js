@@ -1,26 +1,9 @@
 import express from 'express';
-import cors from 'cors';
-import bodyParser from 'body-parser';
-import authRoutes from './routes/authRoutes.js';
-import dbTestRoutes from './routes/dbTestRoutes.js';
+import userRoutes from './routes/userRoutes.js';
 
 const app = express();
 
-app.use(cors());
-app.use(bodyParser.json());
-
-/**
- * ------------------------------------- ROUTES SECTION -------------------------------------
- */
-app.use('/api/auth', authRoutes);
-app.use('/api/db', dbTestRoutes);
-
-
-/**
- *  ------------------------------------- URL SECTION -------------------------------------
- */
-app.get('/', (req, res) => {
-    res.send('Real Prime is running!');
-});
+app.use(express.json());
+app.use('api/users', userRoutes);
 
 export default app;
