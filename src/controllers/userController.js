@@ -18,7 +18,7 @@ export const createUser = async (req, res) => {
             data: {
                 name,
                 email,
-                password: hashPassword,
+                password: hashedPassword,
                 role: role || "buyer"
             },
 
