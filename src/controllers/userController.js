@@ -8,7 +8,7 @@ export const createUser = async (req, res) => {
         const { name, email, password, role} = req.body;
 
         // If email exist?
-        const existing = await prisma.user.findUnique({whre: {email}});
+        const existing = await prisma.user.findUnique({where: {email}});
         if (existing) return res.status(400).json({error: 'Email already exists!'});
 
         // Has password
