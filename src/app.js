@@ -5,11 +5,17 @@ const app = express();
 
 app.use(express.json());
 
-// Routes
-app.use("/api/users", userRoutes);
+/**
+ * 
+ */
+app.use('/api/users', userRoutes);
 
-app.get('/', () => {
-    res.json({message: "Welcome to Real Prime"});
-})
+
+
+app.get('/', (req, res) => {
+    res.json({
+        message: 'Welcome to Real Prime API'
+    });
+});
 
 export default app;
