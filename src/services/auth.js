@@ -1,5 +1,5 @@
 // 2.2 services/auth.js (includes Google Sign-in by ID token)
-import prisma from '../utils/prisma';
+import prisma from '../utils/prisma.js';
 import { comparePassword, hashPassword} from '../utils/crypto.js';
 import { OAuth2Client } from 'google-auth-library'; // this should be checked and verified to our frontend if working
 import {
