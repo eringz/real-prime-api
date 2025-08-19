@@ -12,7 +12,7 @@ import { ENV } from '../config/env.js';
 const googleClient = new OAuth2Client(ENV.GOOGLE_CLIENT_ID);
 
 export const registerUser = async ({name, email, password, role}) => {
-    const exists = await prisma.user.findUnique({where: email});
+    const exists = await prisma.user.findUnique({where: {email}});
     if (exists) throw new Error('Email already exists');
 
     const hashed = await hashPassword(password);
