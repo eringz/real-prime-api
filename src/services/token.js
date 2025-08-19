@@ -6,6 +6,7 @@ import { hashToken } from '../utils/crypto.js';
 
 export const generateAccessToken = user => jwt.sign({sub: user.id, email: user.email, role: user.role}, ENV.JWT_ACCESS_SECRET, {expiresIn: ENV.ACCESS_TTL});
 export const generateRefreshToken = () => crypto.randomBytes(64).toString('hex');
+export const generateRawRefreshToken = () => crypto.randomBytes(64).toString("hex"); // raw (not stored)
 
 export const persistRefreshToken = async (userId, rawToken, meta = {}) => {
     const tokenHash = await hashToken(rawToken);
