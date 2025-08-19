@@ -15,5 +15,22 @@ model User {
     role       String    @default("buyer")
     createdAt  DateTime  @default(now())
     updatedAt  DateTime  @updatedAt
+    tokens     RefreshToken[]
 }
+
+model RefreshToken {
+    id                  Int         @id @default(autoincrement())
+    tokenHash           String
+    userId              Int
+    user                User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+    userAgent           String?
+    ip                  String?
+    expiresAt           DateTime
+    revokedAt           DateTime?
+    createdAt           DateTime    @default(now())
+
+    @@index([userId])
+}
+
+
 

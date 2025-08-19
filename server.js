@@ -1,10 +1,10 @@
 import 'dotenv/config';
 import app from './src/app.js';
-import cors from 'cors';
+// import cors from 'cors';
 
 
-// Middleware
-app.use(cors());
+// // Middleware
+// app.use(cors());
 
 // Port
 const PORT = process.env.PORT || 3000;
