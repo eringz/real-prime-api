@@ -17,7 +17,16 @@ import prisma from '../utils/prisma.js';
 export const register = async (req, res) => {
     try {
         const user = await registerUser(req.body);
-        res.status(201).json({message: 'Registered', user: {id: user.id, email: user.email}});
+
+        
+        res.status(201).json({
+            message: 'Registered', 
+            user: {
+                id: user.id, 
+                email: user.email
+            }
+        });
+
     } catch (err) {
         res.status(400).json({message: err.message});
     }
